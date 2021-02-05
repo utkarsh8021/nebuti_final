@@ -16,14 +16,23 @@
         box-sizing: border-box;
       }
 
-      .slider {
-        width: 60%;
-        height: 80%;
+      .slider1 {
+        width: 100%;
+        height: 100%;
         margin: 0px;
       }
 
+      .slider2 {
+        width: 50%;
+        height: 80%;
+        margin-left: 30rem;
+        padding: 0px 5px;
+      }
+
+
       .slick-slide img {
         width: 100%;
+        height: 100vh;
       }
 
       .slick-prev:before,
@@ -33,11 +42,11 @@
 
       .slick-slide {
         transition: all ease-in-out 0.3s;
-        opacity: 0.2;
+        opacity: 1;
       }
 
       .slick-active {
-        opacity: 0.5;
+        opacity: 1;
       }
 
       .slick-current {
@@ -57,13 +66,21 @@
         position: absolute;
         top: 35%;
         left: 0;
-        z-index: 10;
+        z-index: 20;
       }
+
+      /* .carousal_img{
+        padding: 10px;
+            height: 10rem;
+            width: 12rem;
+      } */
+
+     
     </style>
   </head>
   <body>
       <div class="hero-page">
-        <section class="slider-for slider">
+        <section class="slider-for slider1">
           <div>
             <img src="img/1.png" />
           </div>
@@ -76,25 +93,35 @@
           <div>
             <img src="img/4.png" />
           </div>
+          </section>
           </div>
-        </section>
+        
       </div>
       <div class="carousel-top">
-        <section class="slider-nav slider">
+        <section class="slider-nav slider2" >
           <div>
-            <img src="img/1.png" />
-          </div>
-          <div>
-            <img src="img/2.png" />
-          </div>
-          <div>
-            <img src="img/3.png" />
+            <img src="img/1.png" style="padding: 10px;
+            height: 10rem;
+            width: 12rem;"/>
           </div>
           <div>
-            <img src="img/4.png" />
+            <img src="img/2.png" style="padding: 10px;
+            height: 10rem;
+            width: 12rem;"/>
           </div>
+          <div>
+            <img src="img/3.png" style="padding: 10px;
+            height: 10rem;
+            width: 12rem;" />
           </div>
-        </section>
+          <div>
+            <img src="img/4.png" style="padding: 20px;
+            height: 10rem;
+            width: 12rem;" />
+          </div>
+          </section>
+          </div>
+        
       </div>
 
     <script
