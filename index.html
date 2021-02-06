@@ -25,7 +25,7 @@
       .slider2 {
         width: 50%;
         height: 80%;
-        margin-left: 30rem;
+        margin-left: 38.99rem;
         padding: 0px 5px;
       }
 
@@ -33,6 +33,7 @@
       .slick-slide img {
         width: 100%;
         height: 100vh;
+        
       }
 
       .slick-prev:before,
@@ -59,7 +60,9 @@
         position: absolute;
         top: 0;
         left: 0;
+        background:rgba(0,0,0,0.6);
       }
+
       .carousel-top {
         width: 100%;
         height: 100%;
@@ -69,29 +72,58 @@
         z-index: 20;
       }
 
+      img.top-img{
+        height: 13.2rem;
+        box-shadow: -14px -5px 19px 0px rgba(0,0,0,0.17);
+        border-radius: .4em;
+        
+      }
+
       /* .carousal_img{
         padding: 10px;
             height: 10rem;
             width: 12rem;
       } */
 
+      img.hero-img{
+        opacity: 0.75;
+      
+      }
      
+      h1 {
+          position: absolute;
+          top: 50%;
+          left: 20%;
+          color: white;
+          font-size: 46px;
+          -webkit-transition: all 300ms ease;
+          transition: all 300ms ease;
+          text-transform: uppercase; 
+          font-family: poppins;
+        }
+
+.slide{
+  position: relative;
+}
     </style>
   </head>
   <body>
       <div class="hero-page">
         <section class="slider-for slider1">
-          <div>
-            <img src="img/1.png" />
+          <div class="slide">
+            <img src="img/4.png" class="hero-img"/>
+            <h1>hello</h1>
           </div>
           <div>
-            <img src="img/2.png" />
+           
+            <img src="img/3.png" class="hero-img"/>
+            
           </div>
           <div>
-            <img src="img/3.png" />
+            <img src="img/2.png" class="hero-img"/>
           </div>
           <div>
-            <img src="img/4.png" />
+            <img src="img/1.png" class="hero-img"/>
           </div>
           </section>
           </div>
@@ -100,24 +132,16 @@
       <div class="carousel-top">
         <section class="slider-nav slider2" >
           <div>
-            <img src="img/1.png" style="padding: 10px;
-            height: 10rem;
-            width: 12rem;"/>
+            <img src="img/1.png" class="top-img" style="width: 90%;"/>
           </div>
           <div>
-            <img src="img/2.png" style="padding: 10px;
-            height: 10rem;
-            width: 12rem;"/>
+            <img src="img/2.png" class="top-img" style="width:90%"/>
           </div>
           <div>
-            <img src="img/3.png" style="padding: 10px;
-            height: 10rem;
-            width: 12rem;" />
+            <img src="img/3.png" class="top-img" style="width: 90%;"/>
           </div>
           <div>
-            <img src="img/4.png" style="padding: 20px;
-            height: 10rem;
-            width: 12rem;" />
+            <img src="img/4.png" class="top-img" style="width: 90%;"/>
           </div>
           </section>
           </div>
@@ -140,6 +164,8 @@
           slidesToScroll: 1,
           arrows: false,
           fade: true,
+          autoplay: true,
+          autoplaySpeed: 2000,
           asNavFor: ".slider-nav",
         });
         $(".slider-nav").slick({
@@ -149,8 +175,17 @@
           asNavFor: ".slider-for",
           centerMode: true,
           focusOnSelect: true,
+          dots: true,
+          autoplay: true,
+          autoplaySpeed: 2000,
         });
       });
     </script>
   </body>
 </html>
+
+<!-- style="
+            height: 18rem;
+            width: 15.5rem;
+            border-radius: 30px;
+            margin: 20px;" -->
