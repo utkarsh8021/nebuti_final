@@ -80,16 +80,9 @@
 
       img.top-img{
         height: 13.2rem;
-        box-shadow: -14px -5px 19px 0px rgba(0,0,0,0.17);
         border-radius: 1em;
         
       }
-
-      /* img.top-img:hover{
-       
-        border-radius: 50%;
-        
-      } */
 
       /* .carousal_img{
         padding: 10px;
@@ -97,9 +90,19 @@
             width: 12rem;
       } */
 
+      .hero-page{
+        background: #360033;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #0b8793, #360033);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #0b8793, #360033); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+        overflow: hidden;
+      }
+
+
       img.hero-img{
-        opacity: 0.75;
-      
+        object-fit: cover;
+        opacity: 0.5;
       }
      
       h1 {
@@ -107,28 +110,56 @@
           top: 40%;
           left: 2%;
           color: white;
-          font-size: 46px;
+          font-size: 3em;
           -webkit-transition: all 300ms ease;
           transition: all 300ms ease;
           text-transform: uppercase; 
-          font-family: poppins;
+          font-family: roboto;
+          font-weight: bolder;
+
         }
+
+      .top-text{
+        font-family: helvetica;
+        font-weight: 400;
+        color: white;
+        margin-bottom: 0rem;
+      }
 
     .slide{
         position: relative;
         }
 
-      .ml2{
-        font-weight: 900;
+      /* .ml2{
+        font-weight: bolder;
         font-size: 3em;
+
        }
 
        .ml2 .letter {
         display: inline-block;
         line-height: 1em;
+        } */
+
+        .ml13 {
+          letter-spacing: 0.1em;
         }
 
-      
+.ml13 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+
+      p{
+        position: absolute;
+          top: 50%;
+          left: 2%;
+          color: #ffffff;
+          font-size: 1.3em;
+          -webkit-transition: all 300ms ease;
+          transition: all 300ms ease;
+          font-family: roboto;
+      }
 
     </style>
   </head>
@@ -165,18 +196,25 @@
         <section class="slider-for slider1">
           <div class="slide">
             <img src="img/1.jpg" class="hero-img"/>
-            <h1 class="ml2">More than 30 years</h1>
+            <h1 class="ml13">More than 30 years</h1>
+            <p class="ml13"> hello again</p>
           </div>
           <div>
            
             <img src="img/2.jpg" class="hero-img"/>
+            <h1 class="ml13">More than 30 years</h1>
+            <p class="ml13"> hello again</p>
             
           </div>
           <div>
             <img src="img/3.jpg" class="hero-img"/>
+            <h1 class="ml13">More than 30 years</h1>
+            <p class="ml13"> hello again</p>
           </div>
           <div>
             <img src="img/4.jpg" class="hero-img"/>
+            <h1 class="ml13">More than 30 years</h1>
+            <p class="ml13"> hello again</p>
           </div>
           </section>
           </div>
@@ -185,17 +223,19 @@
       <div class="carousel-top">
         <section class="slider-nav slider2" >
           <div>
-            
+            <p class="top-text">Treaking</p>
             <img src="img/1.jpg" class="top-img" style="width: 90%;"/>
-            <h2 style="color: white;">hello</h2>
           </div>
           <div>
+            <p class="top-text">Culture</p>
             <img src="img/2.jpg" class="top-img" style="width:90%"/>
           </div>
           <div>
+            <p class="top-text">History</p>
             <img src="img/3.jpg" class="top-img" style="width: 90%;"/>
           </div>
           <div>
+            <p class="top-text">Adventure</p>
             <img src="img/4.jpg" class="top-img" style="width: 90%;"/>
           </div>
           </section>
@@ -224,7 +264,7 @@
           slidesToScroll: 1,
           arrows: false,
           fade: true,
-          autoplay: false,
+          autoplay: true,
           autoplaySpeed: 2000,
           asNavFor: ".slider-nav",
         });
@@ -236,7 +276,7 @@
           centerMode: false,
           focusOnSelect: true,
           dots: true,
-          autoplay: false,
+          autoplay: true,
           autoplaySpeed: 2000,
         });
       });
@@ -244,31 +284,33 @@
 
     <script>
       // Wrap every letter in a span
-var textWrapper = document.querySelector('.ml2');
-textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+    $('.ml13').each(function(){
+      $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+    });
 
-anime.timeline({loop: true})
-  .add({
-    targets: '.ml2 .letter',
-    scale: [4,1],
-    opacity: [0,1],
-    translateZ: 0,
-    easing: "easeOutExpo",
-    duration: 950,
-    delay: (el, i) => 70*i
-  }).add({
-    targets: '.ml2',
-    opacity: 0,
-    duration: 1000,
-    easing: "easeOutExpo",
-    delay: 1000
-  });
+
+    anime.timeline({loop: true})
+      .add({
+        targets: '.ml13 .letter',
+        translateY: [100,0],
+        translateZ: 0,
+        opacity: [0,1],
+        easing: "easeOutExpo",
+        duration: 1400,
+        delay: function(el, i) {
+          return 300 + 30 * i;
+        }
+      }).add({
+        targets: '.ml13 .letter',
+        translateY: [0,-100],
+        opacity: [1,0],
+        easing: "easeInExpo",
+        duration: 1200,
+        delay: function(el, i) {
+          return 100 + 30 * i;
+        }
+      });
     </script>
   </body>
 </html>
 
-<!-- style="
-            height: 18rem;
-            width: 15.5rem;
-            border-radius: 30px;
-            margin: 20px;" -->
