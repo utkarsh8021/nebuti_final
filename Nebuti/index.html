@@ -20,6 +20,169 @@
     <link rel="stylesheet" href="rs-plugin/css/navigation.css">
     <link rel="stylesheet" href="tuner/css/colorpicker.css">
     <link rel="stylesheet" href="tuner/css/styles.css">
+<!-- ----------- -->
+    <link rel="stylesheet" type="text/css" href="./slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css" />
+    <!-- bootstrap cdn -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- animejs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+<!-- ------------------->
+
+<style type="text/css">
+
+  .slider1 {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+  }
+
+  .slider2 {
+    width: 50%;
+    height: 80%;
+    margin-left: 38.80rem;
+    padding: 0px 5px;
+  }
+
+
+  .slick-slide img {
+    width: 100%;
+    height: 100vh;
+    
+  }
+
+  .slick-prev:before,
+  .slick-next:before {
+    color: black;
+  }
+
+  .slick-slide {
+    transition: all ease-in-out 0.3s;
+    opacity: 1;
+  }
+
+  .slick-active {
+    opacity: 1;
+  }
+
+  .slick-current {
+    opacity: 1;
+  }
+
+  .hero-page{
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    position: absolute !important;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    background:rgba(0,0,0,0.6);
+    background: #360033;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #0b8793, #360033);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #0b8793, #360033); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+  }
+
+  .carousel-top {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 35%;
+    left: 0;
+    z-index: 20;
+  }
+
+  img.top-img{
+    height: 13.2rem;
+    border-radius: 1em;
+    
+  }
+
+
+
+  img.hero-img{
+    object-fit: cover;
+    opacity: 0.5;
+  }
+ 
+  h1 {
+      position: absolute;
+      top: 40%;
+      left: 2%;
+      color: white;
+      font-size: 3em;
+      /* -webkit-transition: all 300ms ease; */
+      transition: all 300ms ease;
+      text-transform: uppercase; 
+      font-family: roboto;
+      font-weight: bolder;
+      opacity: 1;
+    }
+
+  .top-text{
+    font-family: helvetica;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 0rem;
+  }
+
+
+  p{
+    position: absolute;
+      top: 50%;
+      left: 2%;
+      color: #ffffff;
+      font-size: 1.3em;
+      -webkit-transition: all 300ms ease;
+      transition: all 300ms ease;
+      font-family: roboto;
+  }
+
+  @-webkit-keyframes fadeInUpSD {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(100px);
+      transform: translateY(100px);
+    }
+
+    100% {
+      opacity: 1;
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
+
+  @keyframes fadeInUpSD {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(100px);
+      transform: translateY(100px);
+    }
+
+    100% {
+      opacity: 1;
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
+
+  .fadeInUpSD {
+    -webkit-animation-name: fadeInUpSD;
+    animation-name: fadeInUpSD;
+  }
+
+  .slide{
+    animation-name: fadeInUpSD;
+    animation-duration: 3s;
+    opacity: 1;
+    width: 100%;
+    position: relative;
+  }
+
+</style>
+
   </head>
   <body>
     <!-- header page-->
@@ -187,7 +350,7 @@
       <!-- End Navigation panel-->
     </header>
     <!-- ! header page-->
-    <div class="content-body">
+    <!-- <div class="content-body">
       <div class="tp-banner-container">
         <div class="tp-banner-slider">
           <ul>
@@ -212,9 +375,70 @@
               </div>
             </li>
           </ul>
-        </div>
+        </div> -->
         <!-- slider info-->
-        <div class="slider-info-wrap clearfix">
+
+        
+      <div>
+
+        <div class="hero-page" style="margin-top: 50px;">
+          <section class="slider-for slider1">
+    
+            <div class="slide">
+              <img src="img/1.jpg" class="hero-img"/>
+              <h1 class="ml13">More than 30 years</h1>
+              <p class="ml13"> hello again</p>
+            </div>
+            <div>
+             
+              <img src="img/2.jpg" class="hero-img"/>
+              <h1 class="ml13">We are nebuti</h1>
+              <p class="ml13"> hello</p>
+              </div>
+    
+            <div>
+              <img src="img/3.jpg" class="hero-img"/>
+              <h1 class="ml13">More than 30 years</h1>
+              <p class="ml13"> hello again</p>
+            </div>
+    
+            <div>
+              <img src="img/4.jpg" class="hero-img"/>
+              <h1 class="ml13">More than 30 years</h1>
+              <p class="ml13"> hello again</p>
+            </div>
+    
+            </section>
+            </div>
+            
+        
+          <div class="carousel-top">
+            <section class="slider-nav slider2" >
+              <div>
+                <p class="top-text">Treaking</p>
+                <img src="img/1.jpg" class="top-img" style="width: 90%;"/>
+              </div>
+              <div>
+                <p class="top-text">Culture</p>
+                <img src="img/2.jpg" class="top-img" style="width:90%"/>
+              </div>
+              <div>
+                <p class="top-text">History</p>
+                <img src="img/3.jpg" class="top-img" style="width: 90%;"/>
+              </div>
+              <div>
+                <p class="top-text">Adventure</p>
+                <img src="img/4.jpg" class="top-img" style="width: 90%;"/>
+              </div>
+              </section>
+              </div>
+      </div>
+        
+       
+
+            
+
+        <!-- <div class="slider-info-wrap clearfix">
           <div class="slider-info-content">
             <div class="slider-info-item">
               <div class="info-item-media"><img src="pic/bhaktapur.jpg" data-at2x="pic/culture/bouddha.jpg" alt>
@@ -269,9 +493,9 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
         <!-- ! slider-info-->
-      </div>
+      <!-- </div> -->
       <!-- page section-->
       <!-- <section class="page-section pb-0">
         <div class="container">
@@ -385,8 +609,8 @@
             </div>
           </div>
         </div>
-      </section>
-      ! page section -->
+      </section> -->
+      <!-- ! page section -->
       <!-- counter section -->
       <section class="small-section">
         <div class="container">
@@ -885,6 +1109,44 @@
     <script type="text/javascript" src="tuner/js/colorpicker.js"></script>
     <script type="text/javascript" src="tuner/js/scripts.js"></script>
     <script type="text/javascript" src="js/retina.min.js"></script>
+<!-- -------------------------------- -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      
+    <script
+      src="https://code.jquery.com/jquery-2.2.0.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="./slick/slick.js"
+      type="text/javascript"
+      charset="utf-8"
+    ></script>
+    <script type="text/javascript">
+      $(document).on("ready", function () {
+        $(".slider-for").slick({
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+          fade: true,
+          autoplay: true,
+          autoplaySpeed: 2000,
+          asNavFor: ".slider-nav",
+        });
+        $(".slider-nav").slick({
+          slidesToShow: 3,
+          arrows: false,
+          slidesToScroll: 1,
+          asNavFor: ".slider-for",
+          centerMode: false,
+          focusOnSelect: true,
+          dots: true,
+          autoplay: true,
+          autoplaySpeed: 2000,
+        });
+      });
+    </script>
   </body>
 
 <!-- Mirrored from html.cwsthemes.com/suntour/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 31 Jan 2021 04:39:26 GMT -->
