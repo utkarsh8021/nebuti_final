@@ -128,11 +128,12 @@
       opacity: 1;
     }
 
-  .top-text{
+  p.top-text{
     font-family: helvetica;
     font-weight: 400;
     color: white;
     margin-bottom: 0rem;
+    
   }
 
 
@@ -188,29 +189,29 @@
     position: relative;
   } */
 
-  @-webkit-keyframes zoom {
-  from {
-    -webkit-transform: scale(1, 1);
-  }
-  to {
-    -webkit-transform: scale(1.5, 1.5);
-  }
-}
+      @-webkit-keyframes zoom {
+      from {
+        -webkit-transform: scale(1, 1);
+      }
+      to {
+        -webkit-transform: scale(1.5, 1.5);
+      }
+    }
 
-@keyframes zoom {
-  from {
-    transform: scale(1, 1);
-  }
-  to {
-    transform: scale(1.3, 1.3);
-  }
-}
+    @keyframes zoom {
+      from {
+        transform: scale(1, 1);
+      }
+      to {
+        transform: scale(1.3, 1.3);
+      }
+    }
 
-img.hero-img{
-  -webkit-animation: zoom 30s;
-  animation: zoom 30s;
+    img.hero-img{
+      -webkit-animation: zoom 30s;
+      animation: zoom 30s;
 
-}
+    }
 
   
 
@@ -402,26 +403,26 @@ img.hero-img{
           <section class="slider-for slider1">
     
             <div class="slide">
-              <img src="img/1.jpg" class="hero-img"/>
+              <img src="img/11.jpg" class="hero-img"/>
               <h1>More than 30 years</h1>
               <p> hello again</p>
             </div>
             
             
             <div class="slide">
-             <img src="img/2.jpg" class="hero-img"/>
+             <img src="img/22.jpg" class="hero-img"/>
               <h1>We are nebuti</h1>
               <p> hello</p>
             </div>
     
             <div class="slide">
-              <img src="img/3.jpg" class="hero-img"/>
+              <img src="img/33.jpg" class="hero-img"/>
               <h1>More than 30 years</h1>
               <p> hello again</p>
             </div>
     
             <div class="slide">
-              <img src="img/4.jpg" class="hero-img"/>
+              <img src="img/44.jpg" class="hero-img"/>
               <h1>More than 30 years</h1>
               <p> hello again</p>
             </div>
@@ -1148,7 +1149,7 @@ img.hero-img{
           slidesToScroll: 1,
           arrows: false,
           fade: true,
-          autoplay: true,
+          autoplay: false,
           autoplaySpeed: 2000,
           asNavFor: ".slider-nav",
         });
@@ -1160,7 +1161,7 @@ img.hero-img{
           centerMode: false,
           focusOnSelect: true,
           dots: false,
-          autoplay: true,
+          autoplay: false,
           autoplaySpeed: 2000,
         });
       });
