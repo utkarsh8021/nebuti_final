@@ -95,8 +95,9 @@
   }
 
   img.top-img{
-    height: 13.2rem;
+    height: 19rem;
     border-radius: 1em;
+    object-fit: cover;
     
   }
 
@@ -106,6 +107,12 @@
     object-fit: cover;
     opacity: 0.5;
   }
+
+/* 
+  img.hero-img:hover{
+    transform: scale(1.2);
+    transition: all 1000ms ease;
+  } */
  
   h1 {
       position: absolute;
@@ -140,7 +147,7 @@
       font-family: roboto;
   }
 
-  @-webkit-keyframes fadeInUpSD {
+  /* @-webkit-keyframes fadeInUpSD {
     0% {
       opacity: 0;
       -webkit-transform: translateY(100px);
@@ -179,7 +186,33 @@
     opacity: 1;
     width: 100%;
     position: relative;
+  } */
+
+  @-webkit-keyframes zoom {
+  from {
+    -webkit-transform: scale(1, 1);
   }
+  to {
+    -webkit-transform: scale(1.5, 1.5);
+  }
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(1, 1);
+  }
+  to {
+    transform: scale(1.3, 1.3);
+  }
+}
+
+img.hero-img{
+  -webkit-animation: zoom 30s;
+  animation: zoom 30s;
+
+}
+
+  
 
 </style>
 
@@ -353,6 +386,10 @@
         <div class="tp-banner-slider">
           <ul>
             <li data-masterspeed="700" data-slotamount="7" data-transition="fade"><img src="rs-plugin/assets/loader.gif" data-lazyload="img/Trekking/one.jpg" data-bgposition="center" alt="" data-kenburns="on" data-duration="30000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="10">
+              <div data-x="['center','center','center','center']" data-y="center" data-transform_in="x:-150px;opacity:0;s:1500;e:Power3.easeInOut;" data-transform_out="x:150px;opacity:0;s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-start="400" class="tp-caption sl-content">
+                <div class="sl-title-top">Welcome to</div>
+                <div class="sl-title">Nepal</div>
+              </div>
             </li>
           </ul>
         </div>
@@ -366,26 +403,27 @@
     
             <div class="slide">
               <img src="img/1.jpg" class="hero-img"/>
-              <h1 class="ml13">More than 30 years</h1>
-              <p class="ml13"> hello again</p>
+              <h1>More than 30 years</h1>
+              <p> hello again</p>
             </div>
-            <div>
-             
-              <img src="img/2.jpg" class="hero-img"/>
-              <h1 class="ml13">We are nebuti</h1>
-              <p class="ml13"> hello</p>
-              </div>
+            
+            
+            <div class="slide">
+             <img src="img/2.jpg" class="hero-img"/>
+              <h1>We are nebuti</h1>
+              <p> hello</p>
+            </div>
     
-            <div>
+            <div class="slide">
               <img src="img/3.jpg" class="hero-img"/>
-              <h1 class="ml13">More than 30 years</h1>
-              <p class="ml13"> hello again</p>
+              <h1>More than 30 years</h1>
+              <p> hello again</p>
             </div>
     
-            <div>
+            <div class="slide">
               <img src="img/4.jpg" class="hero-img"/>
-              <h1 class="ml13">More than 30 years</h1>
-              <p class="ml13"> hello again</p>
+              <h1>More than 30 years</h1>
+              <p> hello again</p>
             </div>
     
             </section>
