@@ -157,7 +157,8 @@ html.fancybox-lock {
 }
 
 body {
-    overflow-x: hidden;
+    overflow: hidden;
+    
 }
 
 html, body {
@@ -8445,12 +8446,12 @@ aside .owl-single-item .pic img {
 /*  */
 /* Embed video */
 /*  */
-.embed-responsive {
+.embed-responsivee {
     z-index: 1;
     overflow: hidden;
 }
 
-.embed-responsive .embed-responsive-item {
+.embed-responsivee .embed-responsivee-item {
     z-index: 1;
 }
 

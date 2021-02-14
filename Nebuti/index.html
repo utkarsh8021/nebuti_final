@@ -192,24 +192,6 @@
         <div class="tp-banner-slider">
           <ul>
             <li data-masterspeed="700" data-slotamount="7" data-transition="fade"><img src="rs-plugin/assets/loader.gif" data-lazyload="img/Trekking/one.jpg" data-bgposition="center" alt="" data-kenburns="on" data-duration="30000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="10">
-              <div data-x="['center','center','center','center']" data-y="center" data-transform_in="x:-150px;opacity:0;s:1500;e:Power3.easeInOut;" data-transform_out="x:150px;opacity:0;s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-start="400" class="tp-caption sl-content">
-                <div class="sl-title-top">Welcome to</div>
-                <div class="sl-title">Nepal</div>
-   
-              </div>
-            </li>
-            <li data-masterspeed="700" data-transition="fade"><img src="rs-plugin/assets/loader.gif" data-lazyload="img/Trekking/two.jpg" data-bgposition="center" alt="" data-kenburns="on" data-duration="30000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="10">
-              <div data-x="['center','center','center','center']" data-y="center" data-transform_in="y:-150px;opacity:0;s:1500;e:Power3.easeInOut;" data-transform_out="y:150px;opacity:0;s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-start="400" class="tp-caption sl-content">
-                <div class="sl-title-top">Welcome to</div>
-                <div class="sl-title">Adventure</div>
-                <div class="sl-title-bot">Starting <span>$255</span> per night</div>
-              </div>
-            </li>
-            <li data-masterspeed="700" data-transition="fade"><img src="rs-plugin/assets/loader.gif" data-lazyload="img/Trekking/three.jpg" data-bgposition="center" alt="" data-kenburns="on" data-duration="30000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="10">
-              <div data-x="['center','center','center','center']" data-y="center" data-transform_in="x:150px;opacity:0;s:1500;e:Power3.easeInOut;" data-transform_out="x:-150px;opacity:0;s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-start="400" class="tp-caption sl-content">
-                <div class="sl-title-top">Experience </div>
-                <div class="sl-title">The best</div>
-              </div>
             </li>
           </ul>
         </div>
@@ -546,7 +528,7 @@
               <h3 class="font-5 color-white font-medium">Anil Agarwal</h3>
             </div>
             <div class="col-md-7">
-              <div class="embed-responsive embed-responsive-16by9">
+              <div class="embed-responsivee embed-responsivee-16by9">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/f3GaWoDfWvs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               </div>
             </div>
@@ -885,6 +867,45 @@
     <script type="text/javascript" src="tuner/js/colorpicker.js"></script>
     <script type="text/javascript" src="tuner/js/scripts.js"></script>
     <script type="text/javascript" src="js/retina.min.js"></script>
+<!-- -------------------------------- -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      
+    <script
+      src="https://code.jquery.com/jquery-2.2.0.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="./slick/slick.js"
+      type="text/javascript"
+      charset="utf-8"
+    ></script>
+    <script type="text/javascript">
+      $(document).on("ready", function () {
+        $(".slider-for").slick({
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+          fade: true,
+          dots: true,
+          autoplay: true,
+          autoplaySpeed: 2000,
+          asNavFor: ".slider-nav",
+        });
+        $(".slider-nav").slick({
+          slidesToShow: 3,
+          arrows: false,
+          slidesToScroll: 1,
+          asNavFor: ".slider-for",
+          centerMode: false,
+          focusOnSelect: true,
+          dots: false,
+          autoplay: true,
+          autoplaySpeed: 2000,
+        });
+      });
+    </script>
   </body>
 
 <!-- Mirrored from html.cwsthemes.com/suntour/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 31 Jan 2021 04:39:26 GMT -->
